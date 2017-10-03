@@ -6,8 +6,15 @@ namespace MirzaCryptoHelpers.Hashings
     /// <summary>
     /// This class is used to hash data with SHA1 Algorithm.
     /// </summary>
-    public class SHA1Crypto : IHash
+    public sealed class SHA1Crypto : IHash
     {
+
+        /// <summary>
+        /// Size of the current hash algorithm.
+        /// </summary>
+        public int HashSize
+        { get => 160; }
+
         /// <summary>
         /// Hash string data to hash bytes.
         /// </summary>

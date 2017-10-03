@@ -6,8 +6,16 @@ namespace MirzaCryptoHelpers.Hashings
     /// <summary>
     /// This class is used to hash data with SHA512 Algorithm.
     /// </summary>
-    public class SHA512Crypto : IHash
+    public sealed class SHA512Crypto : IHash
     {
+
+
+        /// <summary>
+        /// Size of the current hash algorithm.
+        /// </summary>
+        public int HashSize
+        { get => 512; }
+
         /// <summary>
         /// Hash string data to hash bytes.
         /// </summary>

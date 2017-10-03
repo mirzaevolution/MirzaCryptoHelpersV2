@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Security.Cryptography;
-
+using MirzaCryptoHelpers.Hashings;
 namespace MirzaCryptoHelpers.Common
 {
     /// <summary>
@@ -92,9 +89,41 @@ namespace MirzaCryptoHelpers.Common
             catch { result = null; }
             return result;
         }
-        #endregion
 
-                
+        /// <summary>
+        /// Create secure password based on the predefined input.
+        /// Hash algorithm must implement IHash interface and choose algorithm
+        /// will determine the size of password returned.
+        /// </summary>
+        /// <param name="input">Input as string. It's called predefined input.</param>
+        /// <param name="hashCrypto">Concrete hash algorithm that implements IHash interface</param>
+        /// <param name="iteration">Iteration count.</param>
+        /// <returns>Hashed password in bytes</returns>
+        /// <exception cref="ArgumentNullException">'input' cannot be null/empty.</exception>
+        /// <exception cref="ArgumentNullException">'hashCrypto' cannot be null.</exception>
+        /// <exception cref="ArgumentOutOfRangeException">'iteration' is invalid.</exception>
+        public static byte[] CreateSecurePassword(string input, IHash hashCrypto, int iteration = 10000)
+        {
+            if (String.IsNullOrEmpty(input))
+                throw new ArgumentNullException(nameof(input));
+            if (hashCrypto == null)
+                throw new ArgumentNullException(nameof(hashCrypto));
+            if (iteration < 5000)
+                throw new ArgumentOutOfRangeException(nameof(iteration), "Min value for iteration is 5000");
+            byte[] data = null;
+            try
+            {
+                byte[] hashedInput = hashCrypto.GetHashBytes(input);
+                using (Rfc2898DeriveBytes generator = new Rfc2898DeriveBytes(input, hashedInput, iteration))
+                {
+                    data = generator.GetBytes(hashCrypto.HashSize / 8);
+                }
+            }
+            catch { data = null; }
+            return data;
+        }
+        #endregion
+        
         #region ToBinary Operations
         /// <summary>
         /// Convert string input to binary.
