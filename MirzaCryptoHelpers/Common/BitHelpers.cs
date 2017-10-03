@@ -94,8 +94,7 @@ namespace MirzaCryptoHelpers.Common
         }
         #endregion
 
-
-        
+                
         #region ToBinary Operations
         /// <summary>
         /// Convert string input to binary.
@@ -233,8 +232,7 @@ namespace MirzaCryptoHelpers.Common
 
         }
         #endregion
-
-
+        
 
         #region ToOctal Operations
         /// <summary>
@@ -372,8 +370,7 @@ namespace MirzaCryptoHelpers.Common
         }
         #endregion
 
-
-        
+                
         #region ToHexadecimal Operations
         /// <summary>
         /// Convert string input to hexadecimal.
