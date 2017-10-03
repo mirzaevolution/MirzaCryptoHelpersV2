@@ -46,10 +46,10 @@
     <Compile Include="AsymmetricCryptos\IAsymmetricCryptography.cs" />
     <Compile Include="AsymmetricCryptos\RsaCrypto.cs" />
     <Compile Include="AsymmetricCryptos\SessionKeys.cs" />
+    <Compile Include="Common\BitHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Common\" />
     <Folder Include="DigitalSignatures\" />
     <Folder Include="Extensions\" />
     <Folder Include="Hashings\" />
