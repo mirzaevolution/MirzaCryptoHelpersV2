@@ -21,7 +21,7 @@ namespace MirzaCryptoHelpers.AsymmetricCryptos
         /// </summary>
         public AsymmetricCrypto()
         {
-            _asymmetricCryptography = new RsaCrypto();
+            _asymmetricCryptography = new RSACrypto();
         }
 
 

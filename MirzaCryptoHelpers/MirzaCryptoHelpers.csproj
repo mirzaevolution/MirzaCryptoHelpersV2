@@ -44,7 +44,7 @@
   <ItemGroup>
     <Compile Include="AsymmetricCryptos\AsymmetricCrypto.cs" />
     <Compile Include="AsymmetricCryptos\IAsymmetricCrypto.cs" />
-    <Compile Include="AsymmetricCryptos\RsaCrypto.cs" />
+    <Compile Include="AsymmetricCryptos\RSACrypto.cs" />
     <Compile Include="AsymmetricCryptos\SessionKeys.cs" />
     <Compile Include="Common\BitHelpers.cs" />
     <Compile Include="Hashings\HashCrypto.cs" />
@@ -55,11 +55,15 @@
     <Compile Include="Hashings\SHA384Crypto.cs" />
     <Compile Include="Hashings\SHA512Crypto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SymmetricCryptos\AESCrypto.cs" />
+    <Compile Include="SymmetricCryptos\DESCrypto.cs" />
+    <Compile Include="SymmetricCryptos\ISymmetricCrypto.cs" />
+    <Compile Include="SymmetricCryptos\SymmetricCrypto.cs" />
+    <Compile Include="SymmetricCryptos\TripleDESCrypto.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DigitalSignatures\" />
     <Folder Include="Extensions\" />
-    <Folder Include="SymmetricCryptos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

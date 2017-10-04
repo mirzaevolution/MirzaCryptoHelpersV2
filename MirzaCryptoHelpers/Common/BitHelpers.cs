@@ -96,9 +96,9 @@ namespace MirzaCryptoHelpers.Common
         /// will determine the size of password returned.
         /// </summary>
         /// <param name="input">Input as string. It's called predefined input.</param>
-        /// <param name="hashCrypto">Concrete hash algorithm that implements IHash interface</param>
+        /// <param name="hashCrypto">Concrete hash algorithm that implements IHash interface.</param>
         /// <param name="iteration">Iteration count.</param>
-        /// <returns>Hashed password in bytes</returns>
+        /// <returns>Random password in bytes.</returns>
         /// <exception cref="ArgumentNullException">'input' cannot be null/empty.</exception>
         /// <exception cref="ArgumentNullException">'hashCrypto' cannot be null.</exception>
         /// <exception cref="ArgumentOutOfRangeException">'iteration' is invalid.</exception>
@@ -122,8 +122,42 @@ namespace MirzaCryptoHelpers.Common
             catch { data = null; }
             return data;
         }
+
+        /// <summary>
+        /// Create secure password based on the predefined input.
+        /// Size of bytes determines the size of returned password.
+        /// Iteration determines how many iterations to take to produce final result.
+        /// </summary>
+        /// <param name="input">Input as string. It's called predefined input.</param>
+        /// <param name="size">Size of returned password in bytes.</param>
+        /// <param name="iteration">Iteration count.</param>
+        /// <returns>Random password in bytes.</returns>
+        /// <exception cref="ArgumentNullException">'input' cannot be null/empty.</exception>
+        /// <exception cref="ArgumentNullException">'size' cannot be less than 8 bytes.</exception>
+        /// <exception cref="ArgumentOutOfRangeException">'iteration' is invalid.</exception>
+        public static byte[] CreateSecurePassword(string input, int size=16, int iteration = 10000)
+        {
+            if (String.IsNullOrEmpty(input))
+                throw new ArgumentNullException(nameof(input));
+            if (size < 8)
+                throw new ArgumentNullException(nameof(size),"'size' cannot be less than 8");
+            if (iteration < 5000)
+                throw new ArgumentOutOfRangeException(nameof(iteration), "Min value for iteration is 5000");
+            byte[] data = null;
+            try
+            {
+                byte[] hashedInput = new SHA512Crypto().GetHashBytes(input);
+                using (Rfc2898DeriveBytes generator = new Rfc2898DeriveBytes(input, hashedInput, iteration))
+                {
+                    data = generator.GetBytes(size);
+                }
+            }
+            catch { data = null; }
+            return data;
+        }
+
         #endregion
-        
+
         #region ToBinary Operations
         /// <summary>
         /// Convert string input to binary.
