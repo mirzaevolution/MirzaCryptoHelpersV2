@@ -6,7 +6,7 @@ namespace MirzaCryptoHelpers.SymmetricCryptos
     /// <summary>
     /// This class simplifies symmetric cryptography operations using Triple DES.
     /// </summary>
-    public class TripleDESCrypto:ISymmetricCrypto
+    public sealed class TripleDESCrypto:ISymmetricCrypto
     {
         private static readonly byte[] _iv = new byte[8] { 126, 193, 191, 216, 95, 114, 132, 154 };
 

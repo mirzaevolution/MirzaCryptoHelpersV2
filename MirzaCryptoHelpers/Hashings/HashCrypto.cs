@@ -28,6 +28,8 @@ namespace MirzaCryptoHelpers.Hashings
         public HashCrypto(IHashCrypto hash)
         {
             _hash = hash;
+            if (_hash == null)
+                _hash = new SHA256Crypto();
         }
 
         /// <summary>

@@ -7,7 +7,7 @@ namespace MirzaCryptoHelpers.SymmetricCryptos
     /// <summary>
     /// This class simplifies symmetric cryptography operations using DES.
     /// </summary>
-    public class DESCrypto:ISymmetricCrypto
+    public sealed class DESCrypto:ISymmetricCrypto
     {
         private static readonly byte[] _iv = new byte[8] { 144, 121, 235, 22, 85, 91, 182, 197 };
 

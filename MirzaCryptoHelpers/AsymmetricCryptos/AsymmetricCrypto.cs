@@ -32,6 +32,10 @@ namespace MirzaCryptoHelpers.AsymmetricCryptos
         public AsymmetricCrypto(IAsymmetricCrypto asymmetricCryptography)
         {
             _asymmetricCryptography = asymmetricCryptography;
+            if(_asymmetricCryptography == null)
+            {
+                _asymmetricCryptography = new RSACrypto();
+            }
         }
 
 
