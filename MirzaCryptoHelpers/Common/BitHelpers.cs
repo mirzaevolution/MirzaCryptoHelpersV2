@@ -102,7 +102,7 @@ namespace MirzaCryptoHelpers.Common
         /// <exception cref="ArgumentNullException">'input' cannot be null/empty.</exception>
         /// <exception cref="ArgumentNullException">'hashCrypto' cannot be null.</exception>
         /// <exception cref="ArgumentOutOfRangeException">'iteration' is invalid.</exception>
-        public static byte[] CreateSecurePassword(string input, IHash hashCrypto, int iteration = 10000)
+        public static byte[] CreateSecurePassword(string input, IHashCrypto hashCrypto, int iteration = 10000)
         {
             if (String.IsNullOrEmpty(input))
                 throw new ArgumentNullException(nameof(input));

@@ -48,7 +48,7 @@
     <Compile Include="AsymmetricCryptos\SessionKeys.cs" />
     <Compile Include="Common\BitHelpers.cs" />
     <Compile Include="Hashings\HashCrypto.cs" />
-    <Compile Include="Hashings\IHash.cs" />
+    <Compile Include="Hashings\IHashCrypto.cs" />
     <Compile Include="Hashings\MD5Crypto.cs" />
     <Compile Include="Hashings\SHA1Crypto.cs" />
     <Compile Include="Hashings\SHA256Crypto.cs" />

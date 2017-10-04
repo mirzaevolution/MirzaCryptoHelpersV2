@@ -6,7 +6,7 @@ namespace MirzaCryptoHelpers.Hashings
     /// <summary>
     /// This class is used to hash data with MD5 Algorithm.
     /// </summary>
-    public sealed class MD5Crypto : IHash
+    public sealed class MD5Crypto : IHashCrypto
     {
         /// <summary>
         /// Size of the current hash algorithm.

@@ -1,6 +1,6 @@
 ﻿namespace MirzaCryptoHelpers.Hashings
 {
-    public interface IHash
+    public interface IHashCrypto
     {
         int HashSize { get; }
         byte[] GetHashBytes(string input);

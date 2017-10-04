@@ -12,7 +12,7 @@ namespace MirzaCryptoHelpers.Hashings
     public class HashCrypto
     {
 
-        private IHash _hash;
+        private IHashCrypto _hash;
 
         /// <summary>
         /// Main constructor. If no parameter passed, SHA256Crypto will be used.
@@ -25,7 +25,7 @@ namespace MirzaCryptoHelpers.Hashings
         /// Injectable constructor. Used commonly for dependency injection.
         /// </summary>
         /// <param name="hash">Concreate implementation of IHash interface.</param>
-        public HashCrypto(IHash hash)
+        public HashCrypto(IHashCrypto hash)
         {
             _hash = hash;
         }
