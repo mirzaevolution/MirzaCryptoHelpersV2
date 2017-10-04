@@ -42,8 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AsymmetricCryptos\AsymmetricCryptography.cs" />
-    <Compile Include="AsymmetricCryptos\IAsymmetricCryptography.cs" />
+    <Compile Include="AsymmetricCryptos\AsymmetricCrypto.cs" />
+    <Compile Include="AsymmetricCryptos\IAsymmetricCrypto.cs" />
     <Compile Include="AsymmetricCryptos\RsaCrypto.cs" />
     <Compile Include="AsymmetricCryptos\SessionKeys.cs" />
     <Compile Include="Common\BitHelpers.cs" />

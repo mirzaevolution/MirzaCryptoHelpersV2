@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,15 +11,15 @@ namespace MirzaCryptoHelpers.AsymmetricCryptos
     /// This is common class for Asymmetric Cryptography operations. 
     /// You can use this class to perform dependency injection.
     /// </summary>
-    public class AsymmetricCryptography
+    public class AsymmetricCrypto
     {
         
-        private IAsymmetricCryptography _asymmetricCryptography;
+        private IAsymmetricCrypto _asymmetricCryptography;
 
         /// <summary>
         /// Default constructor assigns RsaCrypto class to perform Asymmetric Cryptography operations. 
         /// </summary>
-        public AsymmetricCryptography()
+        public AsymmetricCrypto()
         {
             _asymmetricCryptography = new RsaCrypto();
         }
@@ -28,7 +29,7 @@ namespace MirzaCryptoHelpers.AsymmetricCryptos
         /// Injectable constructor that can use your own implementation of IAsymmetricCryptography.
         /// </summary>
         /// <param name="asymmetricCryptography">Class that implements IAsymmetricCryptography.</param>
-        public AsymmetricCryptography(IAsymmetricCryptography asymmetricCryptography)
+        public AsymmetricCrypto(IAsymmetricCrypto asymmetricCryptography)
         {
             _asymmetricCryptography = asymmetricCryptography;
         }
@@ -51,6 +52,7 @@ namespace MirzaCryptoHelpers.AsymmetricCryptos
         /// </summary>
         /// <param name="data">Data to encrypt in bytes.</param>
         /// <param name="publicKeyXml">Public key in xml format.</param>
+        /// <param name="keySize">Key</param>
         /// <returns>Encrypted data in bytes.</returns>
         /// <exception cref="ArgumentNullException">'data' is null</exception>
         /// <exception cref="ArgumentNullException">'publicKeyXml' is null/empty.</exception>
@@ -67,6 +69,7 @@ namespace MirzaCryptoHelpers.AsymmetricCryptos
         /// </summary>
         /// <param name="data">Data to decrypt in bytes.</param>
         /// <param name="privateKeyXml">Private key in xml format.</param>
+        /// <param name="keySize">Key</param>
         /// <returns>Decrypted data in xml format.</returns>
         /// <exception cref="ArgumentNullException">'data' is null</exception>
         /// <exception cref="ArgumentNullException">'privateKeyXml' is null/empty.</exception>

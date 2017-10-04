@@ -1,7 +1,7 @@
 ﻿namespace MirzaCryptoHelpers.AsymmetricCryptos
 {
     
-    public interface IAsymmetricCryptography
+    public interface IAsymmetricCrypto
     {
         SessionKeys GenerateKeys(int keySize);
         byte[] Encrypt(byte[] data, string publicKeyXml, int keySize);

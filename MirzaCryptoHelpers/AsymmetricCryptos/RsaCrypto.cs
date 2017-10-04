@@ -10,7 +10,7 @@ namespace MirzaCryptoHelpers.AsymmetricCryptos
     /// <summary>
     /// This class performs Encryption and Decryption using RSA Algorithm.
     /// </summary>
-    public sealed class RsaCrypto : IAsymmetricCryptography
+    public sealed class RsaCrypto : IAsymmetricCrypto
     {
         /// <summary>
         /// To encrypt/decrypt data, it must be called first to generate both keys
