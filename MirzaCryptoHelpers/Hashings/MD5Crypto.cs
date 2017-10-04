@@ -24,7 +24,7 @@ namespace MirzaCryptoHelpers.Hashings
         {
             if (String.IsNullOrEmpty(input))
                 throw new ArgumentNullException(nameof(input));
-            return GetHashBytes(input);
+            return GetHashBytes(BitHelpers.ConvertStringToBytes(input));
         }
         /// <summary>
         /// Hash bytes data to hash bytes.
