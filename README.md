@@ -17,6 +17,7 @@ string helloFromBin = helloInBin.FromBinary(); //it'll be converted back to "Hel
 2. Encrypt string using AES with password:
 ```csharp
 using MirzaCryptoHelpers.SymmetricCryptos;
+using MirzaCryptoHelpers.Common;
 
 string input = "Hello World!";
 string password = "P@s$w0rD~!";
