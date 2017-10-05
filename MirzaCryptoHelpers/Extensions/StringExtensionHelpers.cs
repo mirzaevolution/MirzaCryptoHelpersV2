@@ -5,7 +5,7 @@ using MirzaCryptoHelpers.Hashings;
 namespace MirzaCryptoHelpers.Extensions
 {
     /// <summary>
-    /// This class contains method extensions for common conversions.
+    /// This class contains method extensions for common conversions in string format.
     /// </summary>
     public static class StringExtensionHelpers
     {
@@ -69,7 +69,7 @@ namespace MirzaCryptoHelpers.Extensions
             return result;
         }
         /// <summary>
-        /// Convert string to octal string.
+        /// Convert string to hexadecimal string.
         /// </summary>
         /// <param name="value">String value. If null/empty, returns null.</param>
         /// <returns>Hexadecimal string.</returns>

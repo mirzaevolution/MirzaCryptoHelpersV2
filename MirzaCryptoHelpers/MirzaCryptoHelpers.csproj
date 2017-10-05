@@ -48,6 +48,7 @@
     <Compile Include="AsymmetricCryptos\SessionKeys.cs" />
     <Compile Include="Common\BitHelpers.cs" />
     <Compile Include="DigitalSignatures\RSADataSignature.cs" />
+    <Compile Include="Extensions\CharExtensionHelpers.cs" />
     <Compile Include="Extensions\StringExtensionHelpers.cs" />
     <Compile Include="Hashings\HashCrypto.cs" />
     <Compile Include="Hashings\IHashCrypto.cs" />
