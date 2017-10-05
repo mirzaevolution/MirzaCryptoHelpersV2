@@ -32,7 +32,7 @@ string plain = BitHelpers.ConvertBytesToString(
         )
    ); //Hello World!
 ```
-And many other helpers available.
+And many other helpers available. Ready? Take a look [our wiki](https://github.com/mirzaevolution/MirzaCryptoHelpersV2/wiki)
 
 
 Best Regards,
