@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Security.Cryptography;
-
 namespace MirzaCryptoHelpers.DigitalSignatures
 {
     /// <summary>
@@ -29,7 +28,7 @@ namespace MirzaCryptoHelpers.DigitalSignatures
         /// <exception cref="ArgumentNullException">'dataToSign' is null/empty.</exception>
         /// <exception cref="ArgumentNullException">'privateKeyXml' is null/empty.</exception>
         /// <example>
-        ///     To Get RSA Keys, 
+        ///     To Get RSA Keys
         ///     <code>
         ///     using MirzaCryptoHelpers.AsymmetricCryptos;
         ///     SessionKeys sessionKeys = new RSACrypto().GenerateKeys();
@@ -54,27 +53,28 @@ namespace MirzaCryptoHelpers.DigitalSignatures
                 catch { signedData = null; }
             }
             return signedData;
-        }   /// <summary>
-            /// Verify digital signature.
-            /// </summary>
-            /// <param name="originalData">Original data.</param>
-            /// <param name="signedData">Signed data.</param>
-            /// <param name="hashAlgorithm">Hash algorithm to use.</param>
-            /// <param name="publicKeyXml">Public key in xml format to verify the data.</param>
-            /// <returns>Boolean value indicating wheter data is valid or not.</returns>
-            /// <exception cref="ArgumentNullException">'originalData' is null/empty.</exception>
-            /// <exception cref="ArgumentNullException">'signedData' is null/empty.</exception>
-            /// <exception cref="ArgumentNullException">'publicKeyXml' is null/empty.</exception>
-            /// <example>
-            ///     To Get RSA Keys, 
-            ///     <code>
-            ///     using MirzaCryptoHelpers.AsymmetricCryptos;
-            ///     SessionKeys sessionKeys = new RSACrypto().GenerateKeys();
-            ///     </code>
-            /// </example>
+        }
+        /// <summary>
+        /// Verify digital signature.
+        /// </summary>
+        /// <param name="originalData">Original data.</param>
+        /// <param name="signedData">Signed data.</param>
+        /// <param name="hashAlgorithm">Hash algorithm to use.</param>
+        /// <param name="publicKeyXml">Public key in xml format to verify the data.</param>
+        /// <returns>Boolean value indicating wheter data is valid or not.</returns>
+        /// <exception cref="ArgumentNullException">'originalData' is null/empty.</exception>
+        /// <exception cref="ArgumentNullException">'signedData' is null/empty.</exception>
+        /// <exception cref="ArgumentNullException">'publicKeyXml' is null/empty.</exception>
+        /// <example>
+        ///     To Get RSA Keys
+        ///     <code>
+        ///     using MirzaCryptoHelpers.AsymmetricCryptos;
+        ///     SessionKeys sessionKeys = new RSACrypto().GenerateKeys();
+        ///     </code>
+        /// </example>
         public static bool VerifyData(byte[] originalData, byte[] signedData, HashAlgorithm hashAlgorithm, string publicKeyXml)
         {
-            
+    
             if (originalData == null || originalData.Length == 0)
                 throw new ArgumentNullException(nameof(originalData));
             if (signedData == null || signedData.Length == 0)

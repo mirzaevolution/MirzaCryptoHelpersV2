@@ -18,19 +18,22 @@ namespace MirzaCryptoHelpers.Hashings
         /// Hash string data to hash bytes.
         /// </summary>
         /// <param name="input">Input as string.</param>
-        /// <returns>Hash data in bytes. Returns empty if fails.</returns>
+        /// <returns>Hash data in bytes. Returns null if fails.</returns>
         /// <exception cref="ArgumentNullException">'input' cannot be null/empty.</exception>
         public byte[] GetHashBytes(string input)
         {
             if (String.IsNullOrEmpty(input))
                 throw new ArgumentNullException(nameof(input));
-            return GetHashBytes(BitHelpers.ConvertStringToBytes(input));
+            var result = BitHelpers.ConvertStringToBytes(input);
+            if (result == null)
+                return null;
+            return GetHashBytes(result);
         }
         /// <summary>
         /// Hash bytes data to hash bytes.
         /// </summary>
         /// <param name="input">Input as bytes.</param>
-        /// <returns>Hash data in bytes. Returns empty if fails.</returns>
+        /// <returns>Hash data in bytes. Returns null if fails.</returns>
         /// <exception cref="ArgumentNullException">'data' cannot be null/empty.</exception>
         public byte[] GetHashBytes(byte[] input)
         {
@@ -51,21 +54,27 @@ namespace MirzaCryptoHelpers.Hashings
         /// Hash data and convert it to Base64 encoded string.
         /// </summary>
         /// <param name="input">Input as string.</param>
-        /// <returns>Hash data in Base64 encoded string format.</returns>
+        /// <returns>Hash data in Base64 encoded string format. Returns null if fails.</returns>
         /// <exception cref="ArgumentNullException">'input' cannot be null/empty.</exception>
         public string GetHashBase64String(string input)
         {
-            return BitHelpers.ConvertToBase64String(GetHashBytes(input));
+            var result = GetHashBytes(input);
+            if (result == null)
+                return null;
+            return BitHelpers.ConvertToBase64String(result);
         }
         /// <summary>
         /// Hash data and convert it to Base64 encoded string.
         /// </summary>
         /// <param name="input">Input as bytes.</param>
-        /// <returns>Hash data in Base64 encoded string format.</returns>
+        /// <returns>Hash data in Base64 encoded string format. Returns null if fails.</returns>
         /// <exception cref="ArgumentNullException">'input' cannot be null/empty.</exception>
         public string GetHashBase64String(byte[] input)
         {
-            return BitHelpers.ConvertToBase64String(GetHashBytes(input));
+            var result = GetHashBytes(input);
+            if (result == null)
+                return null;
+            return BitHelpers.ConvertToBase64String(result);
         }
 
     }

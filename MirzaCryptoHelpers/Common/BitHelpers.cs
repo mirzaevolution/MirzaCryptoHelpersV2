@@ -137,6 +137,7 @@ namespace MirzaCryptoHelpers.Common
         /// <exception cref="ArgumentOutOfRangeException">'iteration' is invalid.</exception>
         public static byte[] CreateSecurePassword(string input, int size=16, int iteration = 10000)
         {
+          
             if (String.IsNullOrEmpty(input))
                 throw new ArgumentNullException(nameof(input));
             if (size < 8)
@@ -163,7 +164,7 @@ namespace MirzaCryptoHelpers.Common
         /// Convert string input to binary.
         /// </summary>
         /// <param name="input">Input as string.</param>
-        /// <returns>Binary string. Returns Empty string if fails.</returns>
+        /// <returns>Binary string.</returns>
         /// <exception cref="ArgumentNullException">'input' cannot be null/empty.</exception>
         public static string ConvertToBinary(string input)
         {
@@ -272,7 +273,7 @@ namespace MirzaCryptoHelpers.Common
         /// <summary>
         /// Convert from binary string to real string.
         /// </summary>
-        /// <param name="binary">Binary data in string format. Ex: 0011 0011.</param>
+        /// <param name="binary">Binary data in string format. Ex: 0011 0011. Returns null if fails.</param>
         /// <param name="result">Real string as a result of conversion.</param>
         /// <returns>True if conversion succeeds. Else returns false.</returns>
         /// <exception cref="ArgumentNullException">'binary' cannot be null/empty</exception>
@@ -280,7 +281,7 @@ namespace MirzaCryptoHelpers.Common
         {
             long[] values = null;
             bool conversionResult = ConvertFromBinary(binary, out values);
-            result = "";
+            result = null;
             if (!conversionResult)
                 return false;
             else
@@ -409,7 +410,7 @@ namespace MirzaCryptoHelpers.Common
         /// <summary>
         /// Convert from octal string to real string.
         /// </summary>
-        /// <param name="octal">Octal data in string format. Ex: 435 014 555.</param>
+        /// <param name="octal">Octal data in string format. Ex: 435 014 555. Returns null if fails.</param>
         /// <param name="result">Real string as a result of conversion.</param>
         /// <returns>True if conversion succeeds. Else returns false.</returns>
         /// <exception cref="ArgumentNullException">'octal' cannot be null/empty</exception>
@@ -417,7 +418,7 @@ namespace MirzaCryptoHelpers.Common
         {
             long[] values = null;
             bool conversionResult = ConvertFromOctal(octal, out values);
-            result = "";
+            result = null;
             if (!conversionResult)
                 return false;
             else
@@ -546,7 +547,7 @@ namespace MirzaCryptoHelpers.Common
         /// <summary> 
         /// Convert from hexadecimal string to real string.
         /// </summary>
-        /// <param name="hexadecimal">Hexadecimal data in string format. Ex: 1C7A B363 87CD.</param>
+        /// <param name="hexadecimal">Hexadecimal data in string format. Ex: 1C7A B363 87CD. Returns null if fails.</param>
         /// <param name="result">Real string as a result of conversion.</param>
         /// <returns>True if conversion succeeds. Else returns false.</returns>
         /// <exception cref="ArgumentNullException">'hexadecimal' cannot be null/empty</exception>
@@ -554,7 +555,7 @@ namespace MirzaCryptoHelpers.Common
         {
             long[] values = null;
             bool conversionResult = ConvertFromHexadecimal(hexadecimal, out values);
-            result = "";
+            result = null;
             if (!conversionResult)
                 return false;
             else
