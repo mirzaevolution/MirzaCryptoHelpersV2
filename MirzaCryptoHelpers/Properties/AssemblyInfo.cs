@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("MirzaCryptoHelpers")]
-[assembly: AssemblyDescription("Lightweight Library to perform common cryptographic operations.")]
+[assembly: AssemblyDescription("Lightweight helper library to perform common cryptographic operations. This helper library is wrapper for existing .NET framework library.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Mirza Ghulam Rasyid")]
 [assembly: AssemblyProduct("MirzaCryptoHelpers")]
