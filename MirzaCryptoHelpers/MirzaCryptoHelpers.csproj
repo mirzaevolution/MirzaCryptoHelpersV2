@@ -49,6 +49,8 @@
     <Compile Include="Common\BitHelpers.cs" />
     <Compile Include="DigitalSignatures\RSADataSignature.cs" />
     <Compile Include="Extensions\CharExtensionHelpers.cs" />
+    <Compile Include="Extensions\IntExtensionHelpers.cs" />
+    <Compile Include="Extensions\LongExtensionHelpers.cs" />
     <Compile Include="Extensions\ShortExtensionHelpers.cs" />
     <Compile Include="Extensions\StringExtensionHelpers.cs" />
     <Compile Include="Hashings\HashCrypto.cs" />

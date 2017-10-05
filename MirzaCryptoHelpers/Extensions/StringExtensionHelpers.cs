@@ -40,7 +40,7 @@ namespace MirzaCryptoHelpers.Extensions
         {
             if (String.IsNullOrEmpty(value))
                 return null;
-            string result;
+            string result = string.Empty;
             BitHelpers.ConvertFromBinary(value, out result);
             return result;
         }
@@ -64,7 +64,7 @@ namespace MirzaCryptoHelpers.Extensions
         {
             if (String.IsNullOrEmpty(value))
                 return null;
-            string result;
+            string result = string.Empty;
             BitHelpers.ConvertFromOctal(value, out result);
             return result;
         }
@@ -88,7 +88,7 @@ namespace MirzaCryptoHelpers.Extensions
         {
             if (String.IsNullOrEmpty(value))
                 return null;
-            string result;
+            string result=string.Empty;
             BitHelpers.ConvertFromHexadecimal(value, out result);
             return result;
         }
