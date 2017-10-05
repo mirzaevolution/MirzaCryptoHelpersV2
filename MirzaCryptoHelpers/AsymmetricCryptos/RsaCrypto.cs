@@ -32,6 +32,7 @@ namespace MirzaCryptoHelpers.AsymmetricCryptos
                     PersistKeyInCsp = false
                 })
                 {
+                    
                     sessionKeys.PrivateKeyXml = rsa.ToXmlString(true);
                     sessionKeys.PublicKeyXml = rsa.ToXmlString(false);
                 }

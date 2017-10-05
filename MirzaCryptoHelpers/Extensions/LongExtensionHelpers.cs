@@ -1,4 +1,6 @@
-﻿namespace MirzaCryptoHelpers.Extensions
+﻿using MirzaCryptoHelpers.Common;
+
+namespace MirzaCryptoHelpers.Extensions
 {
     /// <summary>
     /// This class contains method extensions for common conversions in long format.
@@ -21,7 +23,7 @@
         /// <returns>Binary string.</returns>
         public static string ToBinary(long value)
         {
-            return value.ToString().ToBinary();
+            return BitHelpers.ConvertToBinary(value);
         }
         /// <summary>
         /// Convert long to octal string.
@@ -30,7 +32,7 @@
         /// <returns>Octal string.</returns>
         public static string ToOctal(long value)
         {
-            return value.ToString().ToOctal();
+            return BitHelpers.ConvertToOctal(value);
         }
         /// <summary>
         /// Convert long to hexadecimal string.
@@ -39,7 +41,7 @@
         /// <returns>Hexadecimal string.</returns>
         public static string ToHexadecimal(long value)
         {
-            return value.ToString().ToHexadecimal();
+            return BitHelpers.ConvertToHexadecimal(value);
         }
         /// <summary>
         /// Get MD5 hash from current long in Base64 encoded string format. Returns null if fails.

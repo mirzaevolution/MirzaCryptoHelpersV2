@@ -1,4 +1,6 @@
-﻿namespace MirzaCryptoHelpers.Extensions
+﻿using MirzaCryptoHelpers.Common;
+
+namespace MirzaCryptoHelpers.Extensions
 {
     /// <summary>
     /// This class contains method extensions for common conversions in short format.
@@ -21,7 +23,7 @@
         /// <returns>Binary string.</returns>
         public static string ToBinary(this short value)
         {
-            return value.ToString().ToBinary();
+            return BitHelpers.ConvertToBinary(value);
         }
         /// <summary>
         /// Convert short to octal string.
@@ -30,7 +32,7 @@
         /// <returns>Octal string.</returns>
         public static string ToOctal(this short value)
         {
-            return value.ToString().ToOctal();
+            return BitHelpers.ConvertToOctal(value);
         }
         /// <summary>
         /// Convert short to hexadecimal string.
@@ -39,7 +41,7 @@
         /// <returns>Hexadecimal string.</returns>
         public static string ToHexadecimal(this short value)
         {
-            return value.ToString().ToHexadecimal();
+            return BitHelpers.ConvertToHexadecimal(value);
         }
         /// <summary>
         /// Get MD5 hash from current short in Base64 encoded string format. Returns null if fails.

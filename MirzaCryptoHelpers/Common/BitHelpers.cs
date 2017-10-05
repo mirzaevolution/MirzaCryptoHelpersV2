@@ -92,7 +92,7 @@ namespace MirzaCryptoHelpers.Common
 
         /// <summary>
         /// Create secure password based on the predefined input.
-        /// Hash algorithm must implement IHash interface and choose algorithm
+        /// Hash algorithm must implement IHash interface and choosen algorithm
         /// will determine the size of password returned.
         /// </summary>
         /// <param name="input">Input as string. It's called predefined input.</param>
@@ -113,8 +113,8 @@ namespace MirzaCryptoHelpers.Common
             byte[] data = null;
             try
             {
-                byte[] hashedInput = hashCrypto.GetHashBytes(input);
-                using (Rfc2898DeriveBytes generator = new Rfc2898DeriveBytes(input, hashedInput, iteration))
+                byte[] salt = hashCrypto.GetHashBytes(input);
+                using (Rfc2898DeriveBytes generator = new Rfc2898DeriveBytes(input, salt, iteration))
                 {
                     data = generator.GetBytes(hashCrypto.HashSize / 8);
                 }
@@ -147,8 +147,8 @@ namespace MirzaCryptoHelpers.Common
             byte[] data = null;
             try
             {
-                byte[] hashedInput = new SHA512Crypto().GetHashBytes(input);
-                using (Rfc2898DeriveBytes generator = new Rfc2898DeriveBytes(input, hashedInput, iteration))
+                byte[] salt = new SHA512Crypto().GetHashBytes(input);
+                using (Rfc2898DeriveBytes generator = new Rfc2898DeriveBytes(input, salt, iteration))
                 {
                     data = generator.GetBytes(size);
                 }
@@ -271,10 +271,10 @@ namespace MirzaCryptoHelpers.Common
         }
 
         /// <summary>
-        /// Convert from binary string to real string.
+        /// Convert from binary string to normal string.
         /// </summary>
         /// <param name="binary">Binary data in string format. Ex: 0011 0011. Returns null if fails.</param>
-        /// <param name="result">Real string as a result of conversion.</param>
+        /// <param name="result">Normal string as a result of conversion.</param>
         /// <returns>True if conversion succeeds. Else returns false.</returns>
         /// <exception cref="ArgumentNullException">'binary' cannot be null/empty</exception>
         public static bool ConvertFromBinary(string binary, out string result)
@@ -408,10 +408,10 @@ namespace MirzaCryptoHelpers.Common
             return true;
         }
         /// <summary>
-        /// Convert from octal string to real string.
+        /// Convert from octal string to normal string.
         /// </summary>
         /// <param name="octal">Octal data in string format. Ex: 435 014 555. Returns null if fails.</param>
-        /// <param name="result">Real string as a result of conversion.</param>
+        /// <param name="result">Normal string as a result of conversion.</param>
         /// <returns>True if conversion succeeds. Else returns false.</returns>
         /// <exception cref="ArgumentNullException">'octal' cannot be null/empty</exception>
         public static bool ConvertFromOctal(string octal, out string result)
@@ -545,10 +545,10 @@ namespace MirzaCryptoHelpers.Common
             return true;
         }
         /// <summary> 
-        /// Convert from hexadecimal string to real string.
+        /// Convert from hexadecimal string to normal string.
         /// </summary>
         /// <param name="hexadecimal">Hexadecimal data in string format. Ex: 1C7A B363 87CD. Returns null if fails.</param>
-        /// <param name="result">Real string as a result of conversion.</param>
+        /// <param name="result">Normal string as a result of conversion.</param>
         /// <returns>True if conversion succeeds. Else returns false.</returns>
         /// <exception cref="ArgumentNullException">'hexadecimal' cannot be null/empty</exception>
         public static bool ConvertFromHexadecimal(string hexadecimal, out string result)
