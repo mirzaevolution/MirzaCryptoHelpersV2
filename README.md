@@ -34,6 +34,11 @@ string plain = BitHelpers.ConvertBytesToString(
 And many other helpers available. Ready? Take a look [our wiki](https://github.com/mirzaevolution/MirzaCryptoHelpersV2/wiki)
 
 
+## Instal at Nuget.Org
+```
+Install-Package MirzaCryptoHelpersV2 -Version 2.0.0
+```
+
 Best Regards,
 
 
