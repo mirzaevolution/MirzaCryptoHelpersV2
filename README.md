@@ -1,8 +1,7 @@
 # MirzaCryptoHelpersV2
 
 Lightweight helper library to perform common cryptographic operations.
-This helper library is wrapper from existing .NET framework library.
-This library was created to ease development when we have to deal with cryptography operations, hashing and conversions by simply wrapping all the related operations found in .NET Framework into streamlined classes, methods and extension methods. 
+This helper library is wrapper from existing .NET framework library was created to ease development when we have to deal with cryptography operations, hashing and conversions by simply wrapping all the related operations found in .NET Framework into streamlined classes, methods and extension methods.
 
 ### Examples:
 1. Converting string to binary and otherwise:
