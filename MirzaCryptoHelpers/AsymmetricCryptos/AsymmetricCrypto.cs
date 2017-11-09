@@ -44,7 +44,7 @@ namespace MirzaCryptoHelpers.AsymmetricCryptos
         /// and used to perform the operations.
         /// </summary>
         /// <returns>SessionsKeys. Returns null if GenerateKeys fails.</returns>
-        /// <exception cref="CryptographicException">'keySize' must be in valid range</exception>
+        /// <exception cref="CryptographicException">'keySize' must be in valid range.</exception>
         public SessionKeys GenerateKeys(int keySize)
         {
             return _asymmetricCryptography.GenerateKeys(keySize);
@@ -60,7 +60,7 @@ namespace MirzaCryptoHelpers.AsymmetricCryptos
         /// <returns>Encrypted data in bytes.</returns>
         /// <exception cref="ArgumentNullException">'data' is null</exception>
         /// <exception cref="ArgumentNullException">'publicKeyXml' is null/empty.</exception>
-        /// <exception cref="CryptographicException">'keySize' must be in valid range</exception>
+        /// <exception cref="CryptographicException">'keySize' must be in valid range.</exception>
         public byte[] Encrypt(byte[] data, string publicKeyXml, int keySize)
         {
             return _asymmetricCryptography.Encrypt(data, publicKeyXml, keySize);
@@ -77,7 +77,7 @@ namespace MirzaCryptoHelpers.AsymmetricCryptos
         /// <returns>Decrypted data in xml format.</returns>
         /// <exception cref="ArgumentNullException">'data' is null</exception>
         /// <exception cref="ArgumentNullException">'privateKeyXml' is null/empty.</exception>
-        /// <exception cref="CryptographicException">'keySize' must be in valid range</exception>
+        /// <exception cref="CryptographicException">'keySize' must be in valid range.</exception>
         public byte[] Decrypt(Byte[] data, string privateKeyXml, int keySize)
         {
             return _asymmetricCryptography.Decrypt(data, privateKeyXml, keySize);

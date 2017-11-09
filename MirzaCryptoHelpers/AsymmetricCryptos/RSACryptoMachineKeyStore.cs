@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MirzaCryptoHelpers.AsymmetricCryptos
 {
@@ -36,7 +33,7 @@ namespace MirzaCryptoHelpers.AsymmetricCryptos
         /// It will store keys to computer's key store. It Uses UseMachineKeyStore flag for CspParameters.
         /// </summary>
         /// <param name="data">Data to encrypt in bytes.</param>
-        /// <param name="keySize">Rsa Legal Key Size (384-16384 with skipSize=8)</param>
+        /// <param name="keySize">Rsa Legal Key Size (384-16384 with skipSize=8).</param>
         /// <returns>Encrypted data.</returns>
         /// <exception cref="ArgumentNullException">'data' is null</exception>
         /// <exception cref="CryptographicException">'keySize' must be in range of 384-16384 with skipSize=8</exception>
@@ -66,7 +63,7 @@ namespace MirzaCryptoHelpers.AsymmetricCryptos
         /// It will store keys to computer's key store. It Uses UseMachineKeyStore flag for CspParameters.
         /// </summary>
         /// <param name="data">Data to encrypt in bytes.</param>
-        /// <param name="keySize">Rsa Legal Key Size (384-16384 with skipSize=8)</param>
+        /// <param name="keySize">Rsa Legal Key Size (384-16384 with skipSize=8).</param>
         /// <returns>Decrypted data.</returns>
         /// <exception cref="ArgumentNullException">'data' is null</exception>
         /// <exception cref="CryptographicException">'keySize' must be in range of 384-16384 with skipSize=8</exception>

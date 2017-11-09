@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>MirzaCryptoHelpersV2</id>
+    <version>2.2.0</version>
+    <authors>Mirza Ghulam Rasyid</authors>
+    <owners>Mirza Ghulam Rasyid</owners>
+    <licenseUrl>https://github.com/mirzaevolution/MirzaCryptoHelpersV2/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/mirzaevolution/MirzaCryptoHelpersV2</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      Lightweight helper library to perform common cryptographic operations. 
+      This helper library is wrapper from existing .NET framework library.
+      This library requires .NET Framework 4.5+.
+    </description>
+    <releaseNotes>
+      MirzaCryptoHelpersV2 2.2.0
+      In this features we fixed a few bugs and added 2 new classes:
+      1. RSACryptoMachineKeyStore
+      2. BitComparer
+    </releaseNotes>
+    <summary>
+      Lightweight helper library to perform common cryptographic operations. This helper library is wrapper from existing .NET framework library.
+    </summary>
+    <copyright>Copyright 2017</copyright>
+    <tags>MirzaCryptoHelpersV2 Cryptography Helpers CryptographyHelpers Encryption Decryption AES SHA MD5 RSA</tags>
+  </metadata>
+  <files>
+    <file src="bin\RELEASE\MirzaCryptoHelpersV2.dll" target="lib\net45"></file>
+    <file src="bin\RELEASE\MirzaCryptoHelpersV2.xml" target="lib\net45"></file>
+  </files>
+</package>

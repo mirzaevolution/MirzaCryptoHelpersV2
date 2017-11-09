@@ -17,7 +17,7 @@ namespace MirzaCryptoHelpers.AsymmetricCryptos
         /// To encrypt/decrypt data, it must be called first to generate both keys
         /// and used to perform the operations.
         /// </summary>
-        /// <param name="keySize">Rsa Legal Key Size (384-16384 with skipSize=8)</param>
+        /// <param name="keySize">Rsa Legal Key Size (384-16384 with skipSize=8).</param>
         /// <returns>SessionsKeys. Returns null if GenerateKeys fails.</returns>
         /// <exception cref="CryptographicException">'keySize' must be in range of 384-16384 with skipSize=8</exception>
         public SessionKeys GenerateKeys(int keySize=4096)
@@ -47,7 +47,7 @@ namespace MirzaCryptoHelpers.AsymmetricCryptos
         /// </summary>
         /// <param name="data">Data to encrypt in bytes.</param>
         /// <param name="publicKeyXml">Public key in xml format.</param>
-        /// <param name="keySize">Rsa Legal Key Size (384-16384 with skipSize=8)</param>
+        /// <param name="keySize">Rsa Legal Key Size (384-16384 with skipSize=8).</param>
         /// <returns>Encrypted data.</returns>
         /// <exception cref="ArgumentNullException">'data' is null.</exception>
         /// <exception cref="ArgumentNullException">'publicKeyXml' is null/empty.</exception>
@@ -83,7 +83,7 @@ namespace MirzaCryptoHelpers.AsymmetricCryptos
         /// </summary>
         /// <param name="data">Data to decrypt in bytes.</param>
         /// <param name="privateKeyXml">Private key in xml format.</param>
-        /// <param name="keySize">Rsa Legal Key Size (384-16384 with skipSize=8)</param>
+        /// <param name="keySize">Rsa Legal Key Size (384-16384 with skipSize=8).</param>
         /// <returns>Decrypted data.</returns>
         /// <exception cref="ArgumentNullException">'data' is null.</exception>
         /// <exception cref="ArgumentNullException">'privateKeyXml' is null/empty.</exception>

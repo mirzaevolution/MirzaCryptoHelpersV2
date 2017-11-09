@@ -15,11 +15,11 @@ namespace MirzaCryptoHelpers.Common
         /// </summary>
         /// <param name="length">Length of bytes.</param>
         /// <returns>Random numbers.</returns>
-        /// <exception cref="InvalidOperationException">'length' must be greater than 0</exception>
+        /// <exception cref="InvalidOperationException">'length' must be greater than 0.</exception>
         public static byte[] GenerateRandomNumbers(int length)
         {
             if (length <= 0)
-                throw new InvalidOperationException("param 'length' must be greater than 0");
+                throw new InvalidOperationException("param 'length' must be greater than 0.");
             byte[] randomBytes = new byte[length];
             using (RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider())
             {
@@ -33,7 +33,7 @@ namespace MirzaCryptoHelpers.Common
         /// Converts given string to UTF-8 bytes.
         /// </summary>
         /// <param name="input">Input string.</param>
-        /// <returns>UTF-8 bytes</returns>
+        /// <returns>UTF-8 bytes.</returns>
         /// <exception cref="ArgumentNullException">'input' cannot be null/empty.</exception>
         public static byte[] ConvertStringToBytes(string input)
         {
@@ -109,7 +109,7 @@ namespace MirzaCryptoHelpers.Common
             if (hashCrypto == null)
                 throw new ArgumentNullException(nameof(hashCrypto));
             if (iteration < 5000)
-                throw new ArgumentOutOfRangeException(nameof(iteration), "Min value for iteration is 5000");
+                throw new ArgumentOutOfRangeException(nameof(iteration), "Min value for iteration is 5000.");
             byte[] data = null;
             try
             {
@@ -141,9 +141,9 @@ namespace MirzaCryptoHelpers.Common
             if (String.IsNullOrEmpty(input))
                 throw new ArgumentNullException(nameof(input));
             if (size < 8)
-                throw new ArgumentNullException(nameof(size),"'size' cannot be less than 8");
+                throw new ArgumentNullException(nameof(size),"'size' cannot be less than 8.");
             if (iteration < 5000)
-                throw new ArgumentOutOfRangeException(nameof(iteration), "Min value for iteration is 5000");
+                throw new ArgumentOutOfRangeException(nameof(iteration), "Min value for iteration is 5000.");
             byte[] data = null;
             try
             {
@@ -246,7 +246,7 @@ namespace MirzaCryptoHelpers.Common
         /// <param name="binary">Binary data in string format. Ex: 0011 0011.</param>
         /// <param name="result">Array of Int64. It'll be empty if conversion fails.</param>
         /// <returns>True if conversion succeeds. Else returns false.</returns>
-        /// <exception cref="ArgumentNullException">'binary' cannot be null/empty</exception>
+        /// <exception cref="ArgumentNullException">'binary' cannot be null/empty.</exception>
         public static bool ConvertFromBinary(string binary, out long[] result)
         {
             if (String.IsNullOrEmpty(binary))
@@ -276,7 +276,7 @@ namespace MirzaCryptoHelpers.Common
         /// <param name="binary">Binary data in string format. Ex: 0011 0011. Returns null if fails.</param>
         /// <param name="result">Normal string as a result of conversion.</param>
         /// <returns>True if conversion succeeds. Else returns false.</returns>
-        /// <exception cref="ArgumentNullException">'binary' cannot be null/empty</exception>
+        /// <exception cref="ArgumentNullException">'binary' cannot be null/empty.</exception>
         public static bool ConvertFromBinary(string binary, out string result)
         {
             long[] values = null;
@@ -413,7 +413,7 @@ namespace MirzaCryptoHelpers.Common
         /// <param name="octal">Octal data in string format. Ex: 435 014 555. Returns null if fails.</param>
         /// <param name="result">Normal string as a result of conversion.</param>
         /// <returns>True if conversion succeeds. Else returns false.</returns>
-        /// <exception cref="ArgumentNullException">'octal' cannot be null/empty</exception>
+        /// <exception cref="ArgumentNullException">'octal' cannot be null/empty.</exception>
         public static bool ConvertFromOctal(string octal, out string result)
         {
             long[] values = null;
@@ -550,7 +550,7 @@ namespace MirzaCryptoHelpers.Common
         /// <param name="hexadecimal">Hexadecimal data in string format. Ex: 1C7A B363 87CD. Returns null if fails.</param>
         /// <param name="result">Normal string as a result of conversion.</param>
         /// <returns>True if conversion succeeds. Else returns false.</returns>
-        /// <exception cref="ArgumentNullException">'hexadecimal' cannot be null/empty</exception>
+        /// <exception cref="ArgumentNullException">'hexadecimal' cannot be null/empty.</exception>
         public static bool ConvertFromHexadecimal(string hexadecimal, out string result)
         {
             long[] values = null;
