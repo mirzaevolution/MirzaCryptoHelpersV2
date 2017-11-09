@@ -260,3 +260,6 @@ paket-files/
 __pycache__/
 *.pyc
 /nuget.exe
+
+
+MirzaCryptoHelpers/MirzaCryptoHelpers.csproj.nuspec
