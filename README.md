@@ -1,7 +1,11 @@
-# MirzaCryptoHelpersV2
+# MirzaCryptoHelpers Verified Level 2 (v2.2.0)
 
 Lightweight helper library to perform common cryptographic operations.
 This helper library is wrapper from existing .NET framework library and was created to ease development when we have to deal with cryptography operations, hashing and conversions by simply wrapping all the related operations found in .NET Framework into streamlined classes, methods and extension methods.
+
+In this features we fixed **a few bugs** and added **2 new classes**: 
+1. RSACryptoMachineKeyStore 
+2. BitComparer
 
 ### Examples:
 1. Converting string to binary and otherwise:
@@ -35,9 +39,19 @@ And many other helpers available. Ready? Take a look [our wiki](https://github.c
 
 
 ### Install from Nuget.Org
+
+**Old Version:**
+
 ```
 Install-Package MirzaCryptoHelpersV2 -Version 2.0.0
 ```
+
+### [Newer Version (Recommended)](https://www.nuget.org/packages/MirzaCryptoHelpersV2/2.2.0)
+
+```
+Install-Package MirzaCryptoHelpersV2 -Version 2.2.0
+```
+
 
 Best Regards,
 
