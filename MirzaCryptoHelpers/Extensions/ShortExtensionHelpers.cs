@@ -8,7 +8,7 @@ namespace MirzaCryptoHelpers.Extensions
     public static class ShortExtensionHelpers
     {
         /// <summary>
-        /// Convert short to UTF-8 bytes.
+        /// Converts short to UTF-8 bytes.
         /// </summary>
         /// <param name="value">short value.</param>
         /// <returns>UTF-8 bytes.</returns>
@@ -17,7 +17,7 @@ namespace MirzaCryptoHelpers.Extensions
             return value.ToString().ToUTF8Bytes();
         }
         /// <summary>
-        /// Convert short to binary string.
+        /// Converts short to binary string.
         /// </summary>
         /// <param name="value">short value.</param>
         /// <returns>Binary string.</returns>
@@ -26,7 +26,7 @@ namespace MirzaCryptoHelpers.Extensions
             return BitHelpers.ConvertToBinary(value);
         }
         /// <summary>
-        /// Convert short to octal string.
+        /// Converts short to octal string.
         /// </summary>
         /// <param name="value">short value.</param>
         /// <returns>Octal string.</returns>
@@ -44,7 +44,7 @@ namespace MirzaCryptoHelpers.Extensions
             return BitHelpers.ConvertToHexadecimal(value);
         }
         /// <summary>
-        /// Get MD5 hash from current short in Base64 encoded string format. Returns null if fails.
+        /// Gets MD5 hash from current short in Base64 encoded string format. Returns null if fails.
         /// </summary>
         /// <param name="value">short value.</param>
         /// <returns>MD5 hash in Base64 encoded string. Returns null if fails </returns>
@@ -53,7 +53,7 @@ namespace MirzaCryptoHelpers.Extensions
             return value.ToString().GetMD5Hash();
         }
         /// <summary>
-        /// Get SHA1 hash from current short in Base64 encoded string format. Returns null if fails.
+        /// Gets SHA1 hash from current short in Base64 encoded string format. Returns null if fails.
         /// </summary>
         /// <param name="value">short value.</param>
         /// <returns>SHA1 hash in Base64 encoded string. Returns null if fails </returns>
@@ -62,7 +62,7 @@ namespace MirzaCryptoHelpers.Extensions
             return value.ToString().GetSHA1Hash();
         }
         /// <summary>
-        /// Get SHA256 hash from current short in Base64 encoded string format. Returns null if fails.
+        /// Gets SHA256 hash from current short in Base64 encoded string format. Returns null if fails.
         /// </summary>
         /// <param name="value">short value.</param>
         /// <returns>SHA256 hash in Base64 encoded string. Returns null if fails </returns>
@@ -71,7 +71,7 @@ namespace MirzaCryptoHelpers.Extensions
             return value.ToString().GetSHA256Hash();
         }
         /// <summary>
-        /// Get SHA384 hash from current short in Base64 encoded string format. Returns null if fails.
+        /// Gets SHA384 hash from current short in Base64 encoded string format. Returns null if fails.
         /// </summary>
         /// <param name="value">short value.</param>
         /// <returns>SHA384 hash in Base64 encoded string. Returns null if fails </returns>
@@ -80,7 +80,7 @@ namespace MirzaCryptoHelpers.Extensions
             return value.ToString().GetSHA384Hash();
         }
         /// <summary>
-        /// Get SHA512 hash from current short in Base64 encoded string format. Returns null if fails.
+        /// Gets SHA512 hash from current short in Base64 encoded string format. Returns null if fails.
         /// </summary>
         /// <param name="value">short value.</param>
         /// <returns>SHA512 hash in Base64 encoded string. Returns null if fails </returns>

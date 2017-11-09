@@ -6,7 +6,7 @@
     public static class CharExtensionHelpers
     {
         /// <summary>
-        /// Convert char to UTF-8 bytes.
+        /// Converts char to UTF-8 bytes.
         /// </summary>
         /// <param name="value">Char value.</param>
         /// <returns>UTF-8 bytes.</returns>
@@ -15,7 +15,7 @@
             return value.ToString().ToUTF8Bytes();
         }
         /// <summary>
-        /// Convert char to binary string.
+        /// Converts char to binary string.
         /// </summary>
         /// <param name="value">Char value.</param>
         /// <returns>Binary string.</returns>
@@ -24,7 +24,7 @@
             return value.ToString().ToBinary();
         }
         /// <summary>
-        /// Convert char to octal string.
+        /// Converts char to octal string.
         /// </summary>
         /// <param name="value">Char value.</param>
         /// <returns>Octal string.</returns>
@@ -33,7 +33,7 @@
             return value.ToString().ToOctal();
         }
         /// <summary>
-        /// Convert char to hexadecimal string.
+        /// Converts char to hexadecimal string.
         /// </summary>
         /// <param name="value">Char value.</param>
         /// <returns>Hexadecimal string.</returns>
@@ -42,7 +42,7 @@
             return value.ToString().ToHexadecimal();
         }
         /// <summary>
-        /// Get MD5 hash from current char in Base64 encoded string format. Returns null if fails.
+        /// Gets MD5 hash from current char in Base64 encoded string format. Returns null if fails.
         /// </summary>
         /// <param name="value">Char value.</param>
         /// <returns>MD5 hash in Base64 encoded string. Returns null if fails </returns>
@@ -51,7 +51,7 @@
             return value.ToString().GetMD5Hash();
         }
         /// <summary>
-        /// Get SHA1 hash from current char in Base64 encoded string format. Returns null if fails.
+        /// Gets SHA1 hash from current char in Base64 encoded string format. Returns null if fails.
         /// </summary>
         /// <param name="value">Char value.</param>
         /// <returns>SHA1 hash in Base64 encoded string. Returns null if fails </returns>
@@ -60,7 +60,7 @@
             return value.ToString().GetSHA1Hash();
         }
         /// <summary>
-        /// Get SHA256 hash from current char in Base64 encoded string format. Returns null if fails.
+        /// Gets SHA256 hash from current char in Base64 encoded string format. Returns null if fails.
         /// </summary>
         /// <param name="value">Char value.</param>
         /// <returns>SHA256 hash in Base64 encoded string. Returns null if fails </returns>
@@ -69,7 +69,7 @@
             return value.ToString().GetSHA256Hash();
         }
         /// <summary>
-        /// Get SHA384 hash from current char in Base64 encoded string format. Returns null if fails.
+        /// Gets SHA384 hash from current char in Base64 encoded string format. Returns null if fails.
         /// </summary>
         /// <param name="value">Char value.</param>
         /// <returns>SHA384 hash in Base64 encoded string. Returns null if fails </returns>
@@ -78,7 +78,7 @@
             return value.ToString().GetSHA384Hash();
         }
         /// <summary>
-        /// Get SHA512 hash from current char in Base64 encoded string format. Returns null if fails.
+        /// Gets SHA512 hash from current char in Base64 encoded string format. Returns null if fails.
         /// </summary>
         /// <param name="value">Char value.</param>
         /// <returns>SHA512 hash in Base64 encoded string. Returns null if fails </returns>

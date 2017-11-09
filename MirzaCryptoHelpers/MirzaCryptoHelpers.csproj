@@ -30,6 +30,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\MirzaCryptoHelpersV2.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -45,7 +46,9 @@
     <Compile Include="AsymmetricCryptos\AsymmetricCrypto.cs" />
     <Compile Include="AsymmetricCryptos\IAsymmetricCrypto.cs" />
     <Compile Include="AsymmetricCryptos\RSACrypto.cs" />
+    <Compile Include="AsymmetricCryptos\RSACryptoMachineKeyStore.cs" />
     <Compile Include="AsymmetricCryptos\SessionKeys.cs" />
+    <Compile Include="Common\BitComparer.cs" />
     <Compile Include="Common\BitHelpers.cs" />
     <Compile Include="DigitalSignatures\RSADataSignature.cs" />
     <Compile Include="Extensions\CharExtensionHelpers.cs" />

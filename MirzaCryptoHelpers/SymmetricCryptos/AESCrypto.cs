@@ -12,12 +12,14 @@ namespace MirzaCryptoHelpers.SymmetricCryptos
         
         private static readonly byte[] _iv = new byte[16] { 255, 126, 242, 239, 122, 156, 180, 151, 176, 121, 145, 143, 152, 254, 125, 156 };
 
+
+
         /// <summary>
-        /// Valid IV size.
+        /// Gets valid IV size.
         /// </summary>
         public int ValidIVSize { get { return 16; } }
         /// <summary>
-        /// Encrypt bytes of data with password using static IV.
+        /// Encrypts bytes of data with password using static IV.
         /// </summary>
         /// <param name="data">Data in bytes.</param>
         /// <param name="password">Key/Password to encrypt.</param>
@@ -50,7 +52,7 @@ namespace MirzaCryptoHelpers.SymmetricCryptos
             
         }
         /// <summary>
-        /// Encrypt bytes of data with password using self-generated IV.
+        /// Encrypts bytes of data with password using self-generated IV.
         /// </summary>
         /// <param name="data">Data in bytes.</param>
         /// <param name="password">Key/Password to encrypt.</param>
@@ -85,7 +87,7 @@ namespace MirzaCryptoHelpers.SymmetricCryptos
             return result;
         }
         /// <summary>
-        /// Encrypt bytes of data with password using dynamic IV.
+        /// Encrypts bytes of data with password using dynamic IV.
         /// </summary>
         /// <param name="data">Data in bytes.</param>
         /// <param name="password">Key/Password to encrypt.</param>
@@ -125,9 +127,9 @@ namespace MirzaCryptoHelpers.SymmetricCryptos
 
 
         /// <summary>
-        /// Decrypt bytes of data with password using static IV.
+        /// Decrypts bytes of data with password using static IV.
         /// </summary>
-        /// <param name="data">Encrypted bytes of data.</param>
+        /// <param name="data">Encrypted data.</param>
         /// <param name="password">Password/Key to decrypt.</param>
         /// <returns>Decrypted data in bytes. Returns null either decryption fails or password is incorrect.</returns>
         /// <exception cref="ArgumentNullException">'data' cannot be null.</exception>
@@ -156,11 +158,11 @@ namespace MirzaCryptoHelpers.SymmetricCryptos
 
             return result;
         }
-        
+
         /// <summary>
-        /// Decrypt bytes of data with password using dynamic IV.
+        /// Decrypts bytes of data with password using dynamic IV.
         /// </summary>
-        /// <param name="data">Encrypted bytes of data.</param>
+        /// <param name="data">Encrypted data.</param>
         /// <param name="password">Password/Key to decrypt.</param>
         /// <param name="iv">Dynamic IV.</param>
         /// <returns>Decrypted data in bytes. Returns null either decryption fails or password is incorrect.</returns>

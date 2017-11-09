@@ -11,7 +11,7 @@ namespace MirzaCryptoHelpers.Common
     {
         #region Common Operations
         /// <summary>
-        /// Generate random numbers.
+        /// Generates random numbers.
         /// </summary>
         /// <param name="length">Length of bytes.</param>
         /// <returns>Random numbers.</returns>
@@ -30,7 +30,7 @@ namespace MirzaCryptoHelpers.Common
 
 
         /// <summary>
-        /// Convert given string to UTF-8 bytes.
+        /// Converts given string to UTF-8 bytes.
         /// </summary>
         /// <param name="input">Input string.</param>
         /// <returns>UTF-8 bytes</returns>
@@ -44,7 +44,7 @@ namespace MirzaCryptoHelpers.Common
 
 
         /// <summary>
-        /// Convert bytes data to UTF-8 string.
+        /// Converts bytes data to UTF-8 string.
         /// </summary>
         /// <param name="data">Data in bytes.</param>
         /// <returns>UTF-8 string.</returns>
@@ -58,7 +58,7 @@ namespace MirzaCryptoHelpers.Common
 
 
         /// <summary>
-        /// Convert bytes data to Base64 encoded string.
+        /// Converts bytes data to Base64 encoded string.
         /// </summary>
         /// <param name="data">Data in bytes.</param>
         /// <returns>Base64 encoded string.</returns>
@@ -72,7 +72,7 @@ namespace MirzaCryptoHelpers.Common
 
 
         /// <summary>
-        /// Convert Base64 encoded string to bytes.
+        /// Converts Base64 encoded string to bytes.
         /// </summary>
         /// <param name="base64String">Base64 encoded string.</param>
         /// <returns>Data in bytes. Returns null if operation fails.</returns>
@@ -91,7 +91,7 @@ namespace MirzaCryptoHelpers.Common
         }
 
         /// <summary>
-        /// Create secure password based on the predefined input.
+        /// Creates secure password based on the predefined input.
         /// Hash algorithm must implement IHash interface and choosen algorithm
         /// will determine the size of password returned.
         /// </summary>
@@ -124,7 +124,7 @@ namespace MirzaCryptoHelpers.Common
         }
 
         /// <summary>
-        /// Create secure password based on the predefined input.
+        /// Creates secure password based on the predefined input.
         /// Size of bytes determines the size of returned password.
         /// Iteration determines how many iterations to take to produce final result.
         /// </summary>
@@ -161,7 +161,7 @@ namespace MirzaCryptoHelpers.Common
 
         #region ToBinary Operations
         /// <summary>
-        /// Convert string input to binary.
+        /// Converts string input to binary.
         /// </summary>
         /// <param name="input">Input as string.</param>
         /// <returns>Binary string.</returns>
@@ -182,7 +182,7 @@ namespace MirzaCryptoHelpers.Common
             return stringBuilder.ToString();
         }
         /// <summary>
-        /// Convert char to binary.
+        /// Converts char to binary.
         /// </summary>
         /// <param name="input">Input as char.</param>
         /// <returns>Binary string. Returns Empty string if fails.</returns>
@@ -191,7 +191,7 @@ namespace MirzaCryptoHelpers.Common
             return ConvertToBinary((long)input);
         }
         /// <summary>
-        /// Convert Int16 input to binary
+        /// Converts Int16 input to binary
         /// </summary>
         /// <param name="input">Input as Int16.</param>
         /// <returns>Binary string. Returns Empty string if fails.</returns>
@@ -207,7 +207,7 @@ namespace MirzaCryptoHelpers.Common
 
         }
         /// <summary>
-        /// Convert Int32 input to binary
+        /// Converts Int32 input to binary
         /// </summary>
         /// <param name="input">Input as Int32.</param>
         /// <returns>Binary string. Returns Empty string if fails.</returns>
@@ -223,7 +223,7 @@ namespace MirzaCryptoHelpers.Common
 
         }
         /// <summary>
-        /// Convert Int64 input to binary.
+        /// Converts Int64 input to binary.
         /// </summary>
         /// <param name="input">Input as Int64.</param>
         /// <returns>Binary string. Returns Empty string if fails.</returns>
@@ -241,7 +241,7 @@ namespace MirzaCryptoHelpers.Common
 
         #region FromBinary
         /// <summary>
-        /// Convert from binary to array of Int64. Each binary converted value will be stored in 'result' index.
+        /// Converts from binary to array of Int64. Each binary converted value will be stored in 'result' index.
         /// </summary>
         /// <param name="binary">Binary data in string format. Ex: 0011 0011.</param>
         /// <param name="result">Array of Int64. It'll be empty if conversion fails.</param>
@@ -271,7 +271,7 @@ namespace MirzaCryptoHelpers.Common
         }
 
         /// <summary>
-        /// Convert from binary string to normal string.
+        /// Converts from binary string to normal string.
         /// </summary>
         /// <param name="binary">Binary data in string format. Ex: 0011 0011. Returns null if fails.</param>
         /// <param name="result">Normal string as a result of conversion.</param>
@@ -300,7 +300,7 @@ namespace MirzaCryptoHelpers.Common
 
         #region ToOctal Operations
         /// <summary>
-        /// Convert string input to octal.
+        /// Converts string input to octal.
         /// </summary>
         /// <param name="input">Input as string.</param>
         /// <returns>Octal string. Returns empty string if fails.</returns>
@@ -321,7 +321,7 @@ namespace MirzaCryptoHelpers.Common
             return stringBuilder.ToString();
         }
         /// <summary>
-        /// Convert char input to octal.
+        /// Converts char input to octal.
         /// </summary>
         /// <param name="input">Input as char.</param>
         /// <returns>Octal string. Returns empty if fails.</returns>
@@ -330,7 +330,7 @@ namespace MirzaCryptoHelpers.Common
             return ConvertToOctal((long)input);
         }
         /// <summary>
-        /// Convert Int16 input to octal.
+        /// Converts Int16 input to octal.
         /// </summary>
         /// <param name="input">Input as Int16.</param>
         /// <returns>Octal in string. Returns empty if fails.</returns>
@@ -346,7 +346,7 @@ namespace MirzaCryptoHelpers.Common
             return result;
         }
         /// <summary>
-        /// Convert Int32 input to octal.
+        /// Converts Int32 input to octal.
         /// </summary>
         /// <param name="input">Input as Int32.</param>
         /// <returns>Octal string. Returns empty if fails.</returns>
@@ -361,7 +361,7 @@ namespace MirzaCryptoHelpers.Common
             return result;
         }
         /// <summary>
-        /// Convert Int64 to octal.
+        /// Converts Int64 to octal.
         /// </summary>
         /// <param name="input">Input as Int64.</param>
         /// <returns>Octal string. Returns empty if fails.</returns>
@@ -379,7 +379,7 @@ namespace MirzaCryptoHelpers.Common
 
         #region FromOctal Operations
         /// <summary>
-        /// Convert from octal to array of Int64. Each octal converted value will be stored in 'result' index.
+        /// Converts from octal to array of Int64. Each octal converted value will be stored in 'result' index.
         /// </summary>
         /// <param name="octal">Octal data in string format. Ex: 435 014 555.</param>
         /// <param name="result">Array of Int64. It'll be empty if conversion fails.</param>
@@ -408,7 +408,7 @@ namespace MirzaCryptoHelpers.Common
             return true;
         }
         /// <summary>
-        /// Convert from octal string to normal string.
+        /// Converts from octal string to normal string.
         /// </summary>
         /// <param name="octal">Octal data in string format. Ex: 435 014 555. Returns null if fails.</param>
         /// <param name="result">Normal string as a result of conversion.</param>
@@ -437,7 +437,7 @@ namespace MirzaCryptoHelpers.Common
                 
         #region ToHexadecimal Operations
         /// <summary>
-        /// Convert string input to hexadecimal.
+        /// Converts string input to hexadecimal.
         /// </summary>
         /// <param name="input">Input as string.</param>
         /// <returns>Hexadecimal string. Returns empty string if fails.</returns>
@@ -458,7 +458,7 @@ namespace MirzaCryptoHelpers.Common
             return stringBuilder.ToString();
         }
         /// <summary>
-        /// Convert char input to hexadecimal.
+        /// Converts char input to hexadecimal.
         /// </summary>
         /// <param name="input">Input as char.</param>
         /// <returns>Hexadecimal string. Returns empty if fails.</returns>
@@ -467,7 +467,7 @@ namespace MirzaCryptoHelpers.Common
             return ConvertToHexadecimal((long)input);
         }
         /// <summary>
-        /// Convert Int16 input to hexadecimal.
+        /// Converts Int16 input to hexadecimal.
         /// </summary>
         /// <param name="input">Input as Int16.</param>
         /// <returns>Hexadecimal in string. Returns empty if fails.</returns>
@@ -483,7 +483,7 @@ namespace MirzaCryptoHelpers.Common
             return result;
         }
         /// <summary>
-        /// Convert Int32 input to hexadecimal.
+        /// Converts Int32 input to hexadecimal.
         /// </summary>
         /// <param name="input">Input as Int32.</param>
         /// <returns>Hexadecimal string. Returns empty if fails.</returns>
@@ -498,7 +498,7 @@ namespace MirzaCryptoHelpers.Common
             return result;
         }
         /// <summary>
-        /// Convert Int64 to hexadecimal.
+        /// Converts Int64 to hexadecimal.
         /// </summary>
         /// <param name="input">Input as Int64.</param>
         /// <returns>Hexadecimal string. Returns empty if fails.</returns>
@@ -516,7 +516,7 @@ namespace MirzaCryptoHelpers.Common
 
         #region FromHexadecimal Operations
         /// <summary>
-        /// Convert from hexadecimal to array of Int64. Each hexadecimal converted value will be stored in 'result' index.
+        /// Converts from hexadecimal to array of Int64. Each hexadecimal converted value will be stored in 'result' index.
         /// </summary>
         /// <param name="hexadecimal">Hexadecimal data in string format. Ex: 435 014 555.</param>
         /// <param name="result">Array of Int64. It'll be empty if conversion fails.</param>
@@ -545,7 +545,7 @@ namespace MirzaCryptoHelpers.Common
             return true;
         }
         /// <summary> 
-        /// Convert from hexadecimal string to normal string.
+        /// Converts from hexadecimal string to normal string.
         /// </summary>
         /// <param name="hexadecimal">Hexadecimal data in string format. Ex: 1C7A B363 87CD. Returns null if fails.</param>
         /// <param name="result">Normal string as a result of conversion.</param>

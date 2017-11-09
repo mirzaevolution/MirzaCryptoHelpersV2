@@ -10,7 +10,7 @@ namespace MirzaCryptoHelpers.Extensions
     public static class StringExtensionHelpers
     {
         /// <summary>
-        /// Convert string to UTF-8 bytes.
+        /// Converts string to UTF-8 bytes.
         /// </summary>
         /// <param name="value">String value. If null/empty, returns null.</param>
         /// <returns>UTF-8 bytes.</returns>
@@ -21,7 +21,7 @@ namespace MirzaCryptoHelpers.Extensions
             return BitHelpers.ConvertStringToBytes(value);
         }
         /// <summary>
-        /// Convert string to binary string.
+        /// Converts string to binary string.
         /// </summary>
         /// <param name="value">String value. If null/empty, returns null.</param>
         /// <returns>Binary string.</returns>
@@ -32,7 +32,7 @@ namespace MirzaCryptoHelpers.Extensions
             return BitHelpers.ConvertToBinary(value);
         }
         /// <summary>
-        /// Convert from binary string to string. If conversion fails, return null.
+        /// Converts from binary string to string. If conversion fails, return null.
         /// </summary>
         /// <param name="value">String value. If null/empty, returns null.</param>
         /// <returns>Converted string. If conversion fails, return null.</returns>
@@ -45,7 +45,7 @@ namespace MirzaCryptoHelpers.Extensions
             return result;
         }
         /// <summary>
-        /// Convert string to octal string.
+        /// Converts string to octal string.
         /// </summary>
         /// <param name="value">String value. If null/empty, returns null.</param>
         /// <returns>Octal string.</returns>
@@ -56,7 +56,7 @@ namespace MirzaCryptoHelpers.Extensions
             return BitHelpers.ConvertToOctal(value);
         }
         /// <summary>
-        /// Convert from octal string to string. If conversion fails, return null.
+        /// Converts from octal string to string. If conversion fails, return null.
         /// </summary>
         /// <param name="value">String value. If null/empty, returns null.</param>
         /// <returns>Converted string. If conversion fails, return null.</returns>
@@ -69,7 +69,7 @@ namespace MirzaCryptoHelpers.Extensions
             return result;
         }
         /// <summary>
-        /// Convert string to hexadecimal string.
+        /// Converts string to hexadecimal string.
         /// </summary>
         /// <param name="value">String value. If null/empty, returns null.</param>
         /// <returns>Hexadecimal string.</returns>
@@ -80,7 +80,7 @@ namespace MirzaCryptoHelpers.Extensions
             return BitHelpers.ConvertToHexadecimal(value);
         }
         /// <summary>
-        /// Convert from hexadecimal string to string. If conversion fails, return null.
+        /// Converts from hexadecimal string to string. If conversion fails, return null.
         /// </summary>
         /// <param name="value">String value. If null/empty, returns null.</param>
         /// <returns>Converted string. If conversion fails, return null.</returns>
@@ -93,7 +93,7 @@ namespace MirzaCryptoHelpers.Extensions
             return result;
         }
         /// <summary>
-        /// Get MD5 hash from current string in Base64 encoded string format. Returns null if fails.
+        /// Gets MD5 hash from current string in Base64 encoded string format. Returns null if fails.
         /// </summary>
         /// <param name="value">String value. If null/empty, returns null</param>
         /// <returns>MD5 hash in Base64 encoded string. Returns null if fails </returns>
@@ -105,7 +105,7 @@ namespace MirzaCryptoHelpers.Extensions
         }
 
         /// <summary>
-        /// Get SHA1 hash from current string in Base64 encoded string format. Returns null if fails.
+        /// Gets SHA1 hash from current string in Base64 encoded string format. Returns null if fails.
         /// </summary>
         /// <param name="value">String value. If null/empty, returns null</param>
         /// <returns>SHA1 hash in Base64 encoded string. Returns null if fails </returns>
@@ -117,7 +117,7 @@ namespace MirzaCryptoHelpers.Extensions
         }
 
         /// <summary>
-        /// Get SHA256 hash from current string in Base64 encoded string format. Returns null if fails.
+        /// Gets SHA256 hash from current string in Base64 encoded string format. Returns null if fails.
         /// </summary>
         /// <param name="value">String value. If null/empty, returns null</param>
         /// <returns>SHA256 hash in Base64 encoded string. Returns null if fails </returns>
@@ -129,7 +129,7 @@ namespace MirzaCryptoHelpers.Extensions
         }
 
         /// <summary>
-        /// Get SHA384 hash from current string in Base64 encoded string format. Returns null if fails.
+        /// Gets SHA384 hash from current string in Base64 encoded string format. Returns null if fails.
         /// </summary>
         /// <param name="value">String value. If null/empty, returns null</param>
         /// <returns>SHA384 hash in Base64 encoded string. Returns null if fails </returns>
@@ -142,7 +142,7 @@ namespace MirzaCryptoHelpers.Extensions
         }
 
         /// <summary>
-        /// Get SHA512 hash from current string in Base64 encoded string format. Returns null if fails.
+        /// Gets SHA512 hash from current string in Base64 encoded string format. Returns null if fails.
         /// </summary>
         /// <param name="value">String value. If null/empty, returns null</param>
         /// <returns>SHA512 hash in Base64 encoded string. Returns null if fails </returns>
@@ -153,7 +153,7 @@ namespace MirzaCryptoHelpers.Extensions
             return new SHA512Crypto().GetHashBase64String(value);
         }
         /// <summary>
-        /// Convert current string to Base64 encoded string.
+        /// Converts current string to Base64 encoded string.
         /// </summary>
         /// <param name="value">String value.</param>
         /// <returns>Base64 encoded string.</returns>
@@ -164,7 +164,7 @@ namespace MirzaCryptoHelpers.Extensions
             return BitHelpers.ConvertToBase64String(BitHelpers.ConvertStringToBytes(value));
         }
         /// <summary>
-        /// Convert Base64 encoded string to normal string. Returns null either it's invalid format or conversion fails.
+        /// Converts Base64 encoded string to normal string. Returns null either it's invalid format or conversion fails.
         /// </summary>
         /// <param name="value">Base64 encoded string.</param>
         /// <returns>Normal string. Returns null either it's invalid format or conversion fails.</returns>

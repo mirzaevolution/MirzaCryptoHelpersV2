@@ -19,9 +19,9 @@ namespace MirzaCryptoHelpers.DigitalSignatures
     public static class RSADataSignature
     {
         /// <summary>
-        /// Create digital signature.
+        /// Creates digital signature.
         /// </summary>
-        /// <param name="dataToSign">Original data to signed.</param>
+        /// <param name="dataToSign">Original data to sign.</param>
         /// <param name="hashAlgorithm">Hash algorithm to use.</param>
         /// <param name="privateKeyXml">Private key in xml string to sign the data.</param>
         /// <returns>Signed data in bytes. Returns null if fails.</returns>
@@ -41,21 +41,23 @@ namespace MirzaCryptoHelpers.DigitalSignatures
             if (String.IsNullOrEmpty(privateKeyXml))
                 throw new ArgumentNullException(nameof(privateKeyXml));
             byte[] signedData = null;
-            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
+            try
             {
-                try
+                using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
                 {
-                    
                     rsa.PersistKeyInCsp = false;
                     rsa.FromXmlString(privateKeyXml);
                     signedData = rsa.SignData(dataToSign, hashAlgorithm.ToString());
+
                 }
-                catch { signedData = null; }
+
             }
+            catch { signedData = null; }
+            
             return signedData;
         }
         /// <summary>
-        /// Verify digital signature.
+        /// Verifies digital signature.
         /// </summary>
         /// <param name="originalData">Original data.</param>
         /// <param name="signedData">Signed data.</param>
@@ -82,17 +84,19 @@ namespace MirzaCryptoHelpers.DigitalSignatures
             if (String.IsNullOrEmpty(publicKeyXml))
                 throw new ArgumentNullException(publicKeyXml);
             bool verified = false;
-            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider()) 
+            try
             {
-                try
-                {
 
+                using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
+                {
                     rsa.PersistKeyInCsp = false;
                     rsa.FromXmlString(publicKeyXml);
-                    verified =  rsa.VerifyData(originalData, hashAlgorithm.ToString(), signedData);
+                    verified = rsa.VerifyData(originalData, hashAlgorithm.ToString(), signedData);
+
                 }
-                catch { verified = false; }
             }
+            catch { verified = false; }
+            
             return verified;
         }
     }

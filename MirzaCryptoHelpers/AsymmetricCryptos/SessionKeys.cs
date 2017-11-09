@@ -7,11 +7,11 @@
     public class SessionKeys
     {
         /// <summary>
-        /// Public key to encrypt the data.
+        /// Gets/Sets public key to encrypt the data.
         /// </summary>
         public string PublicKeyXml { get; set; }
         /// <summary>
-        /// Private key to decrypt the data.
+        /// Gets/Sets private key to decrypt the data.
         /// </summary>
         public string PrivateKeyXml { get; set; }
     }

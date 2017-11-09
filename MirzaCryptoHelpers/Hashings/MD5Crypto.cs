@@ -9,13 +9,13 @@ namespace MirzaCryptoHelpers.Hashings
     public sealed class MD5Crypto : IHashCrypto
     {
         /// <summary>
-        /// Size of the current hash algorithm.
+        /// Gets/Sets size of the current hash algorithm.
         /// </summary>
         public int HashSize
         { get => 128; }
 
         /// <summary>
-        /// Hash string data to hash bytes.
+        /// Hashes string data to hash bytes.
         /// </summary>
         /// <param name="input">Input as string.</param>
         /// <returns>Hash data in bytes. Returns null if fails.</returns>
@@ -30,7 +30,7 @@ namespace MirzaCryptoHelpers.Hashings
             return GetHashBytes(result);
         }
         /// <summary>
-        /// Hash bytes data to hash bytes.
+        /// Hashes bytes data to hash bytes.
         /// </summary>
         /// <param name="input">Input as bytes.</param>
         /// <returns>Hash data in bytes. Returns null if fails.</returns>
@@ -51,7 +51,7 @@ namespace MirzaCryptoHelpers.Hashings
             return result;
         }
         /// <summary>
-        /// Hash data and convert it to Base64 encoded string.
+        /// Hashes data and converts it to Base64 encoded string.
         /// </summary>
         /// <param name="input">Input as string.</param>
         /// <returns>Hash data in Base64 encoded string format. Returns null if fails.</returns>
@@ -64,7 +64,7 @@ namespace MirzaCryptoHelpers.Hashings
             return BitHelpers.ConvertToBase64String(result);
         }
         /// <summary>
-        /// Hash data and convert it to Base64 encoded string.
+        /// Hashes data and convertes it to Base64 encoded string.
         /// </summary>
         /// <param name="input">Input as bytes.</param>
         /// <returns>Hash data in Base64 encoded string format. Returns null if fails.</returns>

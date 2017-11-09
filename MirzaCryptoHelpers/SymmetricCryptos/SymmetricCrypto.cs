@@ -10,10 +10,16 @@ namespace MirzaCryptoHelpers.SymmetricCryptos
     {
         private ISymmetricCrypto _symmetricCrypto;
 
-        private SymmetricCrypto() { }
+        /// <summary>
+        /// Main constructor that initializes encryption algorithm using AES
+        /// </summary>
+        public SymmetricCrypto()
+        {
+            _symmetricCrypto = new AESCrypto();
+        }
 
         /// <summary>
-        /// Main constructor that accepts class that implements ISymmetricCrypto interface.
+        /// Secondary constructor that accepts class that implements ISymmetricCrypto interface.
         /// </summary>
         /// <param name="symmetricCrypto">Any class that implements ISymmetricCrypto interface. If null, an instance of AESCrypto will be used.</param>
         public SymmetricCrypto(ISymmetricCrypto symmetricCrypto)
@@ -24,7 +30,7 @@ namespace MirzaCryptoHelpers.SymmetricCryptos
         }
 
         /// <summary>
-        /// Encrypt bytes of data with password using static IV.
+        /// Encrypts bytes of data with password using static IV.
         /// </summary>
         /// <param name="data">Data in bytes.</param>
         /// <param name="password">Key/Password to encrypt.</param>
@@ -36,9 +42,9 @@ namespace MirzaCryptoHelpers.SymmetricCryptos
             return _symmetricCrypto.Encrypt(data, password);
         }
         /// <summary>
-        /// Decrypt bytes of data with password using static IV.
+        /// Decrypts bytes of data with password using static IV.
         /// </summary>
-        /// <param name="data">Encrypted bytes of data.</param>
+        /// <param name="data">Encrypted data.</param>
         /// <param name="password">Password/Key to decrypt.</param>
         /// <returns>Decrypted data in bytes. Returns null either decryption fails or password is incorrect.</returns>
         /// <exception cref="ArgumentNullException">'data' cannot be null.</exception>
@@ -49,7 +55,7 @@ namespace MirzaCryptoHelpers.SymmetricCryptos
         }
 
         /// <summary>
-        /// Encrypt data in string format with password using static IV.
+        /// Encrypts data in string format with password using static IV.
         /// It will return cipher text in Base64 string format.
         /// </summary>
         /// <param name="plainText">Plain text or data to encrypt.</param>
@@ -77,7 +83,7 @@ namespace MirzaCryptoHelpers.SymmetricCryptos
         }
 
         /// <summary>
-        /// Decrypt data from Base64 string cipher text to plain text using static IV.
+        /// Decrypts data from Base64 string cipher text to plain text using static IV.
         /// NOTE: If cipher text is not in valid Base64 string format, InvalidOperationException will be thrown.
         /// </summary>
         /// <param name="base64CipherText">Cipher text in Base64 string format.</param>

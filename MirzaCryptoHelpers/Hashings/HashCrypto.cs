@@ -38,7 +38,7 @@ namespace MirzaCryptoHelpers.Hashings
         public int HashSize => _hash.HashSize;
 
         /// <summary>
-        /// Hash data and convert it to Base64 encoded string.
+        /// Hashes data and converts it to Base64 encoded string.
         /// </summary>
         /// <param name="input">Input as string.</param>
         /// <returns>Hash data in Base64 encoded string format.</returns>
@@ -48,7 +48,7 @@ namespace MirzaCryptoHelpers.Hashings
             return _hash.GetHashBase64String(input);
         }
         /// <summary>
-        /// Hash data and convert it to Base64 encoded string.
+        /// Hashes data and converts it to Base64 encoded string.
         /// </summary>
         /// <param name="input">Input as bytes.</param>
         /// <returns>Hash data in Base64 encoded string format.</returns>
@@ -58,7 +58,7 @@ namespace MirzaCryptoHelpers.Hashings
             return _hash.GetHashBase64String(input);
         }
         /// <summary>
-        /// Hash string data to hash bytes.
+        /// Hashes string data to hash bytes.
         /// </summary>
         /// <param name="input">Input as string.</param>
         /// <returns>Hash data in bytes. Returns empty if fails.</returns>
@@ -68,7 +68,7 @@ namespace MirzaCryptoHelpers.Hashings
             return _hash.GetHashBytes(input);
         }
         /// <summary>
-        /// Hash bytes data to hash bytes.
+        /// Hashes bytes data to hash bytes.
         /// </summary>
         /// <param name="input">Input as bytes.</param>
         /// <returns>Hash data in bytes. Returns empty if fails.</returns>
