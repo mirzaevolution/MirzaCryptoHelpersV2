@@ -11,7 +11,7 @@ namespace MirzaCryptoHelpers.Hashings
 
 
         /// <summary>
-        /// Gets/Sets size of the current hash algorithm.
+        /// Gets size of the current hash algorithm.
         /// </summary>
         public int HashSize
         { get => 512; }
