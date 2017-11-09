@@ -3,7 +3,7 @@
 Lightweight helper library to perform common cryptographic operations.
 This helper library is wrapper from existing .NET framework library and was created to ease development when we have to deal with cryptography operations, hashing and conversions by simply wrapping all the related operations found in .NET Framework into streamlined classes, methods and extension methods.
 
-In this features we fixed **a few bugs** and added **2 new classes**: 
+In this version (2.3.0) we fixed **a few bugs** and added **2 new classes**: 
 1. RSACryptoMachineKeyStore 
 2. BitComparer
 
