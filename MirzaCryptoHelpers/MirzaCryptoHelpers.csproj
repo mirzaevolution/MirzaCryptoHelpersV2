@@ -70,8 +70,5 @@
     <Compile Include="SymmetricCryptos\SymmetricCrypto.cs" />
     <Compile Include="SymmetricCryptos\TripleDESCrypto.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="MirzaCryptoHelpers.csproj.nuspec" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
